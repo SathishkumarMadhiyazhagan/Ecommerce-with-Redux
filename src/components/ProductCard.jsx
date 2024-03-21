@@ -10,8 +10,8 @@ export const ProductCard = ({product}) => {
   const {id, name, price, image} = product;
 
   useEffect(() => {
-    const button = cartList.find(element => element.id === id)
-    if(button) {
+    const productInCart = cartList.find(element => element.id === id)
+    if(productInCart) {
       setIsCartAdded(true);
     } else {
       setIsCartAdded(false)
